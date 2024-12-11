@@ -22,3 +22,16 @@ global:
       css/layout/layout.css: {}
     theme:
       css/theme/print.css: { media: print }
+
+resource-detail-page:
+  version: 1.x
+  css:
+    theme:
+      css/theme/versions-slider.css: {}
+      css/theme/resources.css: {}
+  js:
+    js/versions-slider.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once

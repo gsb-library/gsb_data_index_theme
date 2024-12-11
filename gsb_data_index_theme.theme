@@ -18,12 +18,30 @@ function gsb_data_index_theme_preprocess_html(array &$variables): void {
  * Implements hook_preprocess_HOOK() for page.html.twig.
  */
 function gsb_data_index_theme_preprocess_page(array &$variables): void {
-
+  //kpr($variables);
+  if (isset($variables['node'])) {
+    switch($variables['node']->getType()) {
+      case 'resource':
+        $variables['#attached']['library'][] = 'gsb_data_index_theme/resource-detail-page';
+        break;
+    }
+  }
 }
 
 /**
- * Implements hook_preprocess_HOOK() for node.html.twig.
+ * Implements hook_preprocess_field().
  */
-function gsb_data_index_theme_preprocess_node(array &$variables): void {
+function gsb_data_index_theme_preprocess_field(array &$variables): void {
+  if ($variables['field_name'] === 'field_versions') {
+    // Add the custom message used for past versions.
+    $variables['past_version_text'] = theme_get_setting('versions_past');
 
+    // Add a reversed variable to store the list of versions in reverse so newest is first.
+    $variables['reversed_items'] = array_reverse($variables['items']);
+
+    // Add the version number as an available value.
+    foreach($variables['reversed_items'] as $item_index => $reversed_version) {
+      $variables['reversed_items'][$item_index]['version_number'] = $reversed_version['content']['#versions']->get('field_version_number')->getValue()[0]['value'];
+    }
+  }
 }

@@ -1,0 +1,8 @@
+.field--name-field-versions select {
+  height: var(--sp2);
+  margin-bottom: 20px;
+}
+
+.field--name-field-versions .messages {
+  margin-right: 30px;
+}
