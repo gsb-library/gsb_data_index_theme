@@ -1,0 +1,20 @@
+.layout--twocol-bricks > .layout__region--first-below {
+  flex: 0 1 66%;
+}
+
+.layout--twocol-bricks > .layout__region--second-below {
+  flex: 0 1 33%;
+}
+
+.second-below-inside-wrapper {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.field:not(:last-child) {
+  margin-block-end: 10px;
+}
+
+.layout--twocol-bricks > .layout__region--bottom {
+  margin-top: 40px;
+}
