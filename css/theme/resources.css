@@ -1,13 +1,15 @@
 .layout--twocol-bricks > .layout__region--first-below {
   flex: 0 1 66%;
+  margin-top: 40px;
 }
 
 .layout--twocol-bricks > .layout__region--second-below {
   flex: 0 1 33%;
+  margin-top: 40px;
 }
 
 .second-below-inside-wrapper {
-  border: 1px solid black;
+  border: 1px solid var();
   padding: 10px;
 }
 
