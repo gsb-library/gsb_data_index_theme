@@ -1,22 +1,71 @@
-.layout--twocol-bricks > .layout__region--first-below {
-  flex: 0 1 66%;
-  margin-top: 40px;
-}
 
-.layout--twocol-bricks > .layout__region--second-below {
-  flex: 0 1 33%;
-  margin-top: 40px;
-}
-
-.second-below-inside-wrapper {
-  border: 1px solid var();
-  padding: 10px;
-}
 
 .field:not(:last-child) {
   margin-block-end: 10px;
 }
 
+.layout--twocol-bricks > .layout__region--middle {
+  margin-bottom: 40px;
+}
+
 .layout--twocol-bricks > .layout__region--bottom {
   margin-top: 40px;
+}
+
+.layout--twocol-bricks > .layout__region--middle .resource-callout-box  {
+  float: right;
+  border: 1px solid #3333;
+  padding: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  background-color: #eee;
+}
+
+/**
+ * Adjust field item listings.
+ */
+.field--name-field-available-to .field__item {
+  float: left;
+}
+
+.field--name-field-available-to .field__item:after {
+  content: ",";
+  position: relative;
+}
+
+.field--name-field-available-to .field__item:last-child:after {
+  content: none;
+}
+
+#edit-group-detail .field,
+#edit-group-license .field,
+#edit-group-governance .field,
+#edit-group-storage-compute .field {
+  grid-template-columns: calc(28.5% + 10px) calc(66.5% + 10px);
+  display: grid;
+  grid-column-gap: calc(5% - 20px);
+}
+
+.field--label-inline .field__label, .field--label-inline > .field__item, .field--label-inline .field__items {
+  line-height: 20px;
+}
+
+#edit-group-version-notes .views-field.views-field-field-versions li {
+  list-style-type: none;
+}
+
+#edit-group-version-notes .field--name-field-version-notes {
+  background-color: #eee;
+  border: 1px solid;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+#edit-group-version-notes p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+#edit-group-version-notes .view {
+  gap: 0;
 }
