@@ -8,13 +8,6 @@ declare(strict_types=1);
  */
 
 /**
- * Implements hook_preprocess_HOOK() for html.html.twig.
- */
-function gsb_data_index_theme_preprocess_html(array &$variables): void {
-
-}
-
-/**
  * Implements hook_preprocess_HOOK() for page.html.twig.
  */
 function gsb_data_index_theme_preprocess_page(array &$variables): void {
@@ -42,6 +35,37 @@ function gsb_data_index_theme_preprocess_field(array &$variables): void {
     // Add the version number as an available value.
     foreach($variables['reversed_items'] as $item_index => $reversed_version) {
       $variables['reversed_items'][$item_index]['version_number'] = $reversed_version['content']['#versions']->get('field_version_number')->getValue()[0]['value'];
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view()
+ */
+function gsb_data_index_theme_preprocess_views_view(array &$variables) {
+  if ($variables['view']->id() == 'homepage_resource') {
+    $variables['#attached']['library'][] = 'gsb_data_index_theme/views-homepage-resource';
+  }
+}
+
+/**
+ * Implements hook_preprocess_views_view_fields().
+ */
+function gsb_data_index_theme_preprocess_views_view_fields(array &$variables) {
+  // Get view details
+  $view = $variables['view'];
+  $display_id = $view->current_display;
+
+  // Target a specific view and display
+  if ($view->id() == 'homepage_resource' && $display_id == 'listing') {
+    // Add an is_empty variable when there is no content.
+    foreach($variables['fields'] as $key => $field) {
+      if ($variables['row']->_entity->{$key}->value === NULL) {
+        $variables['fields'][$key]->{'is_empty'} = true;
+      }
+      else {
+        $variables['fields'][$key]->{'is_empty'} = false;
+      }
     }
   }
 }

@@ -1,0 +1,50 @@
+{#
+/**
+ * @file
+ * Default theme implementation of a views exposed form.
+ *
+ * Available variables:
+ * - form: A render element representing the form.
+ *
+ * @see template_preprocess_views_exposed_form()
+ *
+ * @ingroup themeable
+ */
+#}
+{% if q is not empty %}
+  {#
+    This ensures that, if clean URLs are off, the 'q' is added first,
+    as a hidden form element, so that it shows up first in the POST URL.
+  #}
+{{ q }}
+{% endif %}
+{{ form }}
+
+<div class="az-filter">
+    <ul>
+        <li class="{% if form.title['#value'] ==  "" %}active{% endif %}">
+            <a href="#" data-search-value="">All</a>
+        </li>
+        {% for i in range('A', 'Z') %}
+            <li class="{% if form.title['#value'] ==  i %}active{% endif %}">
+                <a href="#" data-search-value="{{ i }}" >{{ i }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="topics-filter">
+    {% for key, value in form.topics['#value'] %}
+        <button type="button" class="dataset-filter-button" aria-label="Clear {{ form.topics[key]['#title'] }} filter" data-filter-id="topics" data-item-key="{{ key }}" data-item-type="checkbox">
+            <span class="term">{{ form.topics[key]['#title'] }}</span>
+            <span class="filter-exit" data-filter-id="topics" data-item-key="{{ key }}" data-item-type="checkbox">Clear</span>
+        </button>
+    {% endfor %}
+    {% if (form.topics['#value']|length) > 0 %}
+        <button type="button" class="dataset-filter-button" aria-label="Reset Filters" data-item-key="reset" data-item-type="checkbox">
+            <span class="term">Reset Filters</span>
+            <span class="filter-exit" data-filter-id="reset" data-item-key="reset" data-item-type="checkbox">Clear</span>
+        </button>
+    {% endif %}
+</div>
+

@@ -1,0 +1,169 @@
+/**
+ * Filters
+ */
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .form-item {
+  margin-right: 10px
+}
+
+/* Search Box */
+#block-gsb-data-index-theme-views-block-homepage-resource-listing input[data-drupal-selector="edit-search"] {
+  width: 19em;
+}
+
+/* Topics Filter */
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .olivero-details__wrapper.details-wrapper {
+  border: var(--details-border-width) solid var(--color--gray-95);
+  border-radius: var(--border-radius);
+  box-shadow: 0 1px 4px var(--color--gray-90);
+  position: absolute;
+  margin-left: 0;
+  margin-top: 0;
+  padding: 10px;
+  z-index: 1;
+  background-color: #fff;
+}
+
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .olivero-details {
+  display: inline-block;
+  width: 130px;
+  margin-top: 26px;
+}
+
+/* Search by title begins with */
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .form-item-title {
+  display: none;
+}
+
+/* Items Per Page */
+
+/* A-Z Filter */
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .az-filter {
+  display: block;
+}
+
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .az-filter ul {
+  margin-inline-start: 0;
+}
+
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .az-filter ul li {
+  float: left;
+  list-style-type: none;
+  margin-right: 20px;
+}
+
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .az-filter li.active {
+  border: 1px solid;
+  padding: 0 5px;
+  background-color: #eee;
+}
+
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .az-filter li.active a {
+  color: #000;
+  text-decoration: none;
+}
+
+#block-gsb-data-index-theme-views-block-homepage-resource-listing input[name="reset"] {
+  margin-top: 0;
+}
+
+/* Filtered Buttons */
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .dataset-filter-button {
+  border-radius: 1.25rem;
+  background: #fff;
+  border: .0625rem #d9d7d2 solid;
+  display: inline-block;
+  margin-bottom: .8125rem;
+  margin-right: .625rem;
+  padding: 0;
+  color: rgb(35, 31, 32);
+}
+
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .dataset-filter-button .term {
+  font-size: 1rem;
+  line-height: 1.5;
+  position: relative;
+  top: -0.4375rem;
+  padding: 0.6875rem 0px 0px 1rem;
+}
+
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .dataset-filter-button .filter-exit {
+  display: inline-block;
+  height: 1.75rem;
+  overflow: hidden;
+  position: relative;
+  top: .25rem;
+  width: 1.875rem;
+}
+
+#block-gsb-data-index-theme-views-block-homepage-resource-listing  .dataset-filter-button .filter-exit::before {
+  display: inline-block;
+  padding: .375rem;
+  transform: rotate(45deg);
+  content: "+";
+  speak: none;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+  text-transform: none;
+  line-height: 1;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.7rem;
+  margin-top:-0.3rem;
+  margin-right: 0.1875rem;
+  font-variant: normal;
+}
+
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .dataset-filter-button:hover,
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .dataset-filter-button:focus {
+  background: #00548f;
+  border: .0625rem solid rgba(0,0,0,0);
+  cursor: pointer;
+  color: #fff;
+}
+
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .dataset-filter-button:hover .term,
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .dataset-filter-button:focus .term {
+  color: #fff;
+}
+
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .dataset-filter-button .filter-exit:hover::before {
+  color: #fff !important;
+  text-decoration: none;
+  display: inline-block;
+}
+
+
+
+
+/* Content View */
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .view,
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .view-content {
+  display: block;
+}
+
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .views-row {
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid;
+}
+
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .dataset-attributes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px; /* Adjust spacing between fields */
+}
+
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .dataset-attributes-container .field {
+  flex: 1 1 calc(50% - 8px); /* Two columns */
+  display: flex;
+  flex-direction: column;
+  margin-block-end: 0;
+}
+
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .dataset-attributes-container span.views-label {
+  font-weight: 700;
+}
+
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .field--name-field-v-abstract {
+  margin-top: 20px;
+}

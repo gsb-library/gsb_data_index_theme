@@ -35,3 +35,15 @@ resource-detail-page:
     - core/jquery
     - core/drupal
     - core/once
+
+views-homepage-resource:
+  version: 1.x
+  css:
+    theme:
+      css/theme/views-homepage-resource.css: {}
+  js:
+    js/views-homepage-resource.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/once
