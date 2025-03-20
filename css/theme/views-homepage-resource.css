@@ -37,18 +37,17 @@
 /* Items Per Page */
 
 /* A-Z Filter */
-#block-gsb-data-index-theme-views-block-homepage-resource-listing .az-filter {
-  display: block;
-}
-
 #block-gsb-data-index-theme-views-block-homepage-resource-listing .az-filter ul {
   margin-inline-start: 0;
+  display: flex;
+  gap: 21px;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
 }
 
 #block-gsb-data-index-theme-views-block-homepage-resource-listing .az-filter ul li {
-  float: left;
   list-style-type: none;
-  margin-right: 20px;
 }
 
 #block-gsb-data-index-theme-views-block-homepage-resource-listing .az-filter li.active {

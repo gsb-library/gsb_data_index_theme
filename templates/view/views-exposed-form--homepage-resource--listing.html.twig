@@ -40,11 +40,5 @@
             <span class="filter-exit" data-filter-id="topics" data-item-key="{{ key }}" data-item-type="checkbox">Clear</span>
         </button>
     {% endfor %}
-    {% if (form.topics['#value']|length) > 0 %}
-        <button type="button" class="dataset-filter-button" aria-label="Reset Filters" data-item-key="reset" data-item-type="checkbox">
-            <span class="term">Reset Filters</span>
-            <span class="filter-exit" data-filter-id="reset" data-item-key="reset" data-item-type="checkbox">Clear</span>
-        </button>
-    {% endif %}
 </div>
 
