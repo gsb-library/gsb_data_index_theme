@@ -13,7 +13,6 @@
 }
 
 .layout--twocol-bricks > .layout__region--middle .resource-callout-box  {
-  float: right;
   border: 1px solid #3333;
   padding: 10px;
   margin-left: 10px;
@@ -21,6 +20,43 @@
   background-color: #eee;
 }
 
+/**
+ * Adjust flag module theming.
+ */
+#middle-callout-wrapper {
+  float: right;
+  min-width: 33%;
+}
+
+#middle-callout-wrapper .flag-favorite-resource {
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.flag-favorite-resource .ajax-progress-throbber {
+  display: none;
+}
+
+.flag-favorite-resource a {
+  border: 1px solid !important;
+  padding: 9px;
+  text-decoration: none;
+}
+
+.flag-favorite-resource.action-flag a:hover {
+  background-color: var(--color-text-primary-medium);
+  color: #fff;
+}
+
+.flag-favorite-resource.action-unflag a {
+  background-color: var(--color-text-primary-medium);
+  color: #fff;
+}
+
+.flag-favorite-resource.action-unflag a:hover {
+  background-color: #fff;
+  color: var(--color-text-primary-medium);
+}
 /**
  * Adjust field item listings.
  */
