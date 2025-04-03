@@ -82,6 +82,29 @@
   grid-column-gap: calc(5% - 20px);
 }
 
+#edit-group-governance .field--name-field-stakeholders {
+  display: block;
+}
+
+#edit-group-governance .field--name-field-stakeholders table {
+  width: 100%;
+}
+
+#edit-group-governance .field--name-field-stakeholders table th {
+  text-align: left;
+}
+
+#edit-group-governance .field--name-field-stakeholders table .field {
+  display: block;
+}
+
+#edit-group-governance .field--name-field-stakeholders .field__label {
+  font-size: 1.7em;
+  margin-top: 30px;
+  color: #007C92;
+  text-decoration: underline;
+}
+
 .field--label-inline .field__label, .field--label-inline > .field__item, .field--label-inline .field__items {
   line-height: 20px;
 }
