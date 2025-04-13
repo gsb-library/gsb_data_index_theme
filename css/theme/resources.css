@@ -20,6 +20,11 @@
   background-color: #eee;
 }
 
+.text-content {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+}
+
 /**
  * Adjust flag module theming.
  */

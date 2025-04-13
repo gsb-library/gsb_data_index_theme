@@ -58,9 +58,12 @@
     {% endfor %}
 </div>
 
+{%- if fields["field_a_z_description"].is_empty -%}
+    {% set field = fields["field_versions"] %}
+{%- else -%}
+    {% set field = fields["field_a_z_description"] %}
+{%- endif -%}
 
-
-{% set field = fields["field_versions"] %}
 {%- if field.wrapper_element -%}
     <{{ field.wrapper_element }}{{ field.wrapper_attributes }}>
 {%- endif %}

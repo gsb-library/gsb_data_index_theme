@@ -60,7 +60,9 @@ function gsb_data_index_theme_preprocess_views_view_fields(array &$variables) {
   if ($view->id() == 'homepage_resource' && $display_id == 'listing') {
     // Add an is_empty variable when there is no content.
     foreach($variables['fields'] as $key => $field) {
-      if ($variables['row']->_entity->{$key}->value === NULL) {
+      $entity = $variables['row']->_entity->{$key};
+
+      if ($entity->isEmpty()) {
         $variables['fields'][$key]->{'is_empty'} = true;
       }
       else {

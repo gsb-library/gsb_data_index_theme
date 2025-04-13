@@ -57,6 +57,6 @@
     {%  set valuesArray = valuesArray|merge([item.content["#markup"]]) %}
 {% endfor %}
 <div{{ attributes.addClass(classes) }}>
-    <span{{ title_attributes.addClass(title_classes) }}>{{ label }}</span>
-    <span class="field__values">{{ valuesArray|join(', ') }}</span>
+    <div{{ title_attributes.addClass(title_classes) }}>{{ label }}</div>
+    <div class="field__values">{{ valuesArray|join(', ') }}</div>
 </div>
