@@ -65,6 +65,10 @@
 /**
  * Adjust field item listings.
  */
+.second-below-inside-wrapper .field--label-inline .field__label {
+  line-height: 26px;
+}
+
 .field--name-field-available-to .field__item {
   float: left;
 }
