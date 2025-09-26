@@ -20,6 +20,15 @@
   background-color: #eee;
 }
 
+.layout--twocol-bricks > .layout__region--middle .resource-callout-box .field__label {
+  width: 33%;
+}
+
+.layout--twocol-bricks > .layout__region--middle .resource-callout-box .field__items {
+  width: 66%;
+}
+
+
 .text-content {
   font-family: var(--font-sans);
   font-size: 1rem;
