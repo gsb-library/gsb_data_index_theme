@@ -163,6 +163,10 @@
   font-weight: 700;
 }
 
+#block-gsb-data-index-theme-views-block-homepage-resource-listing .views-field-field-a-z-description {
+  margin-top: 20px;
+}
+
 #block-gsb-data-index-theme-views-block-homepage-resource-listing .field--name-field-v-abstract {
   margin-top: 20px;
 }
