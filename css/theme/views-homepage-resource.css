@@ -173,4 +173,6 @@
 
 #block-gsb-data-index-theme-views-block-homepage-resource-listing .field--name-field-v-abstract {
   margin-top: 20px;
+  font-family: var(--font-sans);
+  font-size: 16px;
 }
