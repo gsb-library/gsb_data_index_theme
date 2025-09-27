@@ -146,6 +146,10 @@
   border-bottom: 1px solid;
 }
 
+#block-gsb-data-index-theme-views-block-homepage-resource-listing h2.field-content {
+  margin-bottom: 10px;
+}
+
 #block-gsb-data-index-theme-views-block-homepage-resource-listing .dataset-attributes-container {
   display: flex;
   flex-wrap: wrap;
