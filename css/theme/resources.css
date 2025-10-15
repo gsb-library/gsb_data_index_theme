@@ -100,6 +100,13 @@
   grid-column-gap: calc(5% - 20px);
 }
 
+.horizontal-tabs-panes .field--type-text-long .field__item {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
 #edit-group-governance .field--name-field-stakeholders {
   display: block;
 }
