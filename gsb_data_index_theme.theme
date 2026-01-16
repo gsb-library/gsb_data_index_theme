@@ -43,8 +43,14 @@ function gsb_data_index_theme_preprocess_field(array &$variables): void {
  * Implements hook_preprocess_views_view()
  */
 function gsb_data_index_theme_preprocess_views_view(array &$variables) {
-  if ($variables['view']->id() == 'homepage_resource') {
-    $variables['#attached']['library'][] = 'gsb_data_index_theme/views-homepage-resource';
+  switch ($variables['view']->id()) {
+    case 'homepage_resource':
+      $variables['#attached']['library'][] = 'gsb_data_index_theme/views-homepage-resource';
+      break;
+
+    case 'all_resources':
+      $variables['#attached']['library'][] = 'gsb_data_index_theme/views-all-resources';
+      break;
   }
 }
 

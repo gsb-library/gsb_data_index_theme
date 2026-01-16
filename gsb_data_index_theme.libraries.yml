@@ -47,3 +47,9 @@ views-homepage-resource:
     - core/jquery
     - core/drupal
     - core/once
+
+views-all-resources:
+  version: 1.x
+  css:
+    theme:
+      css/theme/views-all-resources.css: {}
