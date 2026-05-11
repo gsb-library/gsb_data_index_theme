@@ -153,3 +153,7 @@
 #edit-group-version-notes .view {
   gap: 0;
 }
+
+.horizontal-tabs .horizontal-tab-button.selected {
+  margin-bottom: 0;
+}
